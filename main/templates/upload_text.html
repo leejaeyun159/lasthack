@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp 
+<br><br>
+<center>
+    <img src= "/static/img/cdsc.png" alt="사진검색"width="200"></img>
+    <br><br><br>
+
+        <form method="POST" enctype="multipart/form-data" style="color:gray">
+        {% csrf_token %}
+        {{ form }}
+
+        <button type="submit" class="btn btn-danger">검색하기</button>
+    </form>
+
+    
+    <br><br><br><br> <br><br><br><br> <br><br><br><br>
+</center>
+
+    
+{% endblock %}

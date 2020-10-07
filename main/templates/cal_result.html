@@ -1,0 +1,41 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<center>
+    <br><br><br><br>
+    <h1 style="font-weight:bold;color:rgb(137, 137, 240)">이 상품들의 영양성분은?</h1>
+    {% for bar in bar_list %}
+        <!-- {{ bar }}<br> -->
+    {% endfor %}
+    {% for bar in bar_list %}
+        {{ bar }}<br>
+    {% endfor %}
+
+
+<br><br><br><br>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <td><B>총 제공량</B></td>
+            <td><B>총 열량</B></td>
+            <td><B>총 탄수화물</B></td>
+            <td><B>총 단백질</B></td>
+            <td><B>총 지방</B></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><h1>{{ result1 }}g</h1></td>
+            <td><h1>{{ result2 }}g</h1></td>
+            <td><h1>{{ result3 }}g</h1></td>
+            <td><h1>{{ result4 }}g</h1></td>
+            <td><h1>{{ result5 }}g</h1></td>
+        </tr>
+        </tbody>
+    </table>
+    <br><br><br><br>
+    <a href="{% url 'main:cal_result' %}" style="font-weight: bold;">다시하기</a>
+    <br><br><br><br>
+    <br><br><br><br>
+</center>
+
+{% endblock %}
